@@ -1,0 +1,16 @@
+{
+  "name": "demo",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run ./index.ts",
+    "build:app": "bun build ./index.ts --sourcemap=inline --outfile=./app --target=bun --minify --compile && ./app",
+    "build:dist": "bun build ./index.ts --splitting --sourcemap=inline --outdir=./dist --target=bun --minify && bun run ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
